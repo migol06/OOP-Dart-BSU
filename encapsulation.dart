@@ -1,22 +1,28 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first
 class Person {
   String? _name;
+  int? _age;
 
   Person({String? name}) : _name = name;
 
-  String get getTheName {
+  String get name {
     return _name!;
   }
 
-  void set setName(String setName) {
-    //Juan
-    _name = setName;
+  int get age {
+    return _age!;
+  }
+
+  void set name(String getName) {
+    _name = getName;
+  }
+
+  void set age(int getAge) {
+    _age = getAge;
   }
 }
 
 void main(List<String> args) {
   var person = Person();
-  person.setName = 'Juan';
-
-  print(person.getTheName);
+  print(person.name = 'Juan');
+  print(person.age = 25);
 }
