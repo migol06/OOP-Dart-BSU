@@ -2,27 +2,35 @@ class Person {
   String? _name;
   int? _age;
 
-  Person({String? name}) : _name = name;
-
-  String get name {
+  String getName() {
     return _name!;
   }
 
-  int get age {
+  void setName(String name) {
+    _name = name;
+  }
+
+  int getAge() {
     return _age!;
   }
 
-  void set name(String getName) {
-    _name = getName;
-  }
-
-  void set age(int getAge) {
-    _age = getAge;
+  void setAge(int age) {
+    _age = age;
   }
 }
 
-void main(List<String> args) {
+void main() {
   var person = Person();
-  print(person.name = 'Juan');
-  print(person.age = 25);
+
+  person.setName('Juan');
+  person.setAge(69);
+
+  print(person.getName()); // Output: John
+  print(person.getAge()); // Output: 25
+
+  person.setName("Jane");
+  person.setAge(30);
+
+  print(person.getName()); // Output: Jane
+  print(person.getAge()); // Output: 30
 }
